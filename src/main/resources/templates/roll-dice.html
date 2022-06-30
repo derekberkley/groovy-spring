@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Roll-Dice</title>
+</head>
+<body>
+
+<h1>Roll The Dice</h1>
+
+<form action="/roll-dice/n" method="post">
+    <button type="submit" name="x" value="1">1</button>
+    <button type="submit" name="x" value="2">2</button>
+    <button type="submit" name="x" value="3">3</button>
+    <button type="submit" name="x" value="4">4</button>
+    <button type="submit" name="x" value="5">5</button>
+    <button type="submit" name="x" value="6">6</button>
+</form>
+
+<p>You picked: <span th:text="${x}">nothing yet...</span></p>
+<p>Your die came up as: <span th:text="${random}">haven't rolled yet...</span></p>
+<p>Did you guess correctly? <span th:text="${userGuess}">maybe...</span></p>
+
+</body>
+</html>
+
+
+<!--<form action="/roll-dice" method="get">-->
+<!--    <a href="/roll-dice/n" value="1">1</a>-->
+<!--</form>-->
+<!--<a href="/roll-dice/n" class="search" value="2">2</a>-->
