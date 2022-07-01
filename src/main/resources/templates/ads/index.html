@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Here are the ads!</h1>
+<br>
+<!--/*@thymesVar id="ads" type=""*/-->
+<div th:each="ad : ${ads}">
+
+    <h1 th:text="${ad.title}"></h1>
+
+    <p th:text="${ad.description}"></p>
+</div>
+
+</body>
+</html>
