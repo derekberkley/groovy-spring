@@ -2,6 +2,8 @@ package com.codeup.groovy_spring.models;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name = "posts")
 public class Post {
 
     //TODO: Create a Post class. This class will ultimately represent a POST record from our database.
@@ -17,15 +19,15 @@ public class Post {
     @Column(nullable = false)
     private String body;
 
-    public Post() {}
-
-    public Post(String title, String body) {
-        this.title = title;
-        this.body = body;
-    }
+    @ManyToOne
+    private User user;
 
     public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -44,7 +46,11 @@ public class Post {
         this.body = body;
     }
 
+    public User getUser() {
+        return user;
+    }
 
-
-
+    public void setUser(User user) {
+        this.user = user;
+    }
 }

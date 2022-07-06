@@ -1,32 +1,25 @@
+
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <div th:replace="partials/head.html :: site-head"></div>
+
 <body>
 <div th:replace="partials/header.html :: site-header"></div>
+<h1 class="text-center">Create New Post</h1>
+<div id="create-container">
+    <form class="d-flex flex-column" th:action="@{/posts/create}" th:method="post" th:object="${post}">
+        <label for="postTitle" class="mt-1 mb-3">Title:</label>
+        <input type="text" th:field="*{title}" id="postTitle">
 
+        <label for="postBody" class="mt-1 mb-3">Body:</label>
+        <textarea th:field="*{body}" id="postBody" style="height: 10em;"></textarea>
 
-<!--TODO: Create a posts/create.html view inside of the templates folder. -->
-<!--TODO: This HTML page should contain a form for creating a new post.-->
-
-<div class="container">
-    <form class="col-md-8 offset-md-2" method="post" action="/posts/create">
-        <h1 class="my-4">Create a Post</h1>
-        <div class="form-group">
-            <label for="name">Title</label>
-            <input class="form-control" type="text" id="name" name="name" />
-        </div>
-        <div class="form-group">
-            <label for="price">Body</label>
-            <input class="form-control" type="number" step="0.01" id="price" name="price" />
-        </div>
-
-        <input class="btn btn-block btn-primary" type="submit" value="Submit" />
+        <button type="submit" class="btn btn-primary mt-1 mb-3">Submit Post</button>
     </form>
 </div>
-
-
 
 <div th:replace="partials/footer.html :: site-footer"></div>
 <!--<div th:replace="partials/scripts.html :: site-scripts"></div>-->
 </body>
+
 </html>
