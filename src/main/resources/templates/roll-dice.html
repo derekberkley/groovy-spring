@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8" />
-    <title>Roll-Dice</title>
-</head>
+<div th:replace="partials/head.html :: site-head"></div>
 <body>
-<div th:replace="fragmentfilepath :: navbar"></div>
+<div th:replace="partials/header.html :: site-header"></div>
 
 <h1>Roll The Dice</h1>
 
@@ -22,11 +19,8 @@
 <p>Your die came up as: <span th:text="${random}">haven't rolled yet...</span></p>
 <p>Did you guess correctly? <span th:text="${userGuess}">maybe...</span></p>
 
+
+<div th:replace="partials/footer.html :: site-footer"></div>
+<!--<div th:replace="partials/scripts.html :: site-scripts"></div>-->
 </body>
 </html>
-
-
-<!--<form action="/roll-dice" method="get">-->
-<!--    <a href="/roll-dice/n" value="1">1</a>-->
-<!--</form>-->
-<!--<a href="/roll-dice/n" class="search" value="2">2</a>-->
