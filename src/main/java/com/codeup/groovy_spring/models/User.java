@@ -27,11 +27,11 @@ public class User {
 
     public User() {}
 
-    public User(User user) {
-        id = user.id;
-        email = user.email;
-        username = user.username;
-        password = user.password;
+    public User(User copy) { //this is called a Copy Constructor
+        id = copy.id;
+        email = copy.email;
+        username = copy.username;
+        password = copy.password;
     }
 
     public Long getId() {

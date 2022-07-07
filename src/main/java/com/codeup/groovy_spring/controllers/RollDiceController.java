@@ -24,6 +24,7 @@ public class RollDiceController {
             userGuess = true;
         }
         model.addAttribute("userGuess", userGuess);
+        model.addAttribute("title", "Roll Dice");
         return "roll-dice";
     }
 

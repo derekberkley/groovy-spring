@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <div th:replace="partials/head.html :: site-head"></div>
 <body>
-<!--<div th:replace="partials/header.html :: site-header"></div>-->
+<div th:replace="partials/header.html :: site-header"></div>
 
 <h1>This is the home page</h1>
 
 
-<!--<div th:replace="partials/footer.html :: site-footer"></div>-->
-<!--<div th:replace="partials/scripts.html :: site-scripts"></div>-->
+<div th:replace="partials/footer.html :: site-footer"></div>
+<div th:replace="partials/scripts.html :: site-scripts"></div>
 </body>
 </html>

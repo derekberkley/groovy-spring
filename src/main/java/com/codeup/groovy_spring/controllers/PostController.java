@@ -47,6 +47,7 @@ public class PostController {
 
     @GetMapping("/posts/create")
     public String getCreate(Model model) {
+        model.addAttribute("title", "Create a Post");
         model.addAttribute("post", new Post());
         return "posts/create";
     }
@@ -54,7 +55,7 @@ public class PostController {
     @PostMapping("/posts/create")
     public String postCreate(@ModelAttribute Post post) {
         post.setUser(userDao.getById((long) 1));
-//        emailService.prepareAndSend(post, "Your latest blog post: " + post.getTitle(), "This is the body of your post!" + post.getBody());
+        emailService.prepareAndSend(post, "Your latest blog post: " + post.getTitle(), "This is the body of your post: " + post.getBody());
         postDao.save(post);
         return "redirect:/posts";
     }

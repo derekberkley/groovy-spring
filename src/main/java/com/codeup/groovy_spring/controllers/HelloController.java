@@ -9,14 +9,19 @@ class HelloController {
 
     @GetMapping("/groovy")
     @ResponseBody
-    public String hello() {
+    public String groovy() {
         return "Hello from Spring!";
+    }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello";
     }
 
     @GetMapping("/hello/{name}")
     public String sayHello(@PathVariable String name, Model model) {
         model.addAttribute("name", name);
-        return "Hello";
+        return "hello";
     }
 
     @RequestMapping(path = "/increment/{number}", method = RequestMethod.GET)

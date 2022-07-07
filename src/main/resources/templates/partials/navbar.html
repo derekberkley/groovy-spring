@@ -1,18 +1,21 @@
-
-    <nav class="navbar navbar-expand-sm navbar-light bg-primary justify-content-between px-3" th:fragment="navbar">
+<nav class="navbar navbar-expand-sm navbar-light bg-primary justify-content-between px-3" th:fragment="navbar">
         <a class="navbar-brand" href="#">Navbar</a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="/home">home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/sign-up">Sign Up</a></li>
                 <li class="nav-item"><a class="nav-link" href="/hello">hello</a></li>
-                <li class="nav-item"><a class="nav-link" href="/posts/index">posts</a></li>
+                <li class="nav-item"><a class="nav-link" href="/posts">posts</a></li>
                 <li class="nav-item"><a class="nav-link" href="/roll-dice">roll</a></li>
-                <!--        <li sec:authorize="isAuthenticated()">-->
-                <!--            <form th:action="@{/logout}" th:method="post">-->
-                <!--                <button class="btn">Logout</button>-->
-                <!--            </form>-->
-                <!--        </li>-->
+<!--                        <li sec:authorize="isAuthenticated()">-->
+<!--                            <form th:action="@{/logout}" th:method="post">-->
+<!--                                <button class="btn">Logout</button>-->
+<!--                            </form>-->
+<!--                        </li>-->
             </ul>
         </div>
 
     </nav>
+
+
